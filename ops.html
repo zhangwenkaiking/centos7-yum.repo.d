@@ -1,0 +1,210 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="Images/Logo.png" type="image/png">
+  <title>OPS Navigation Service</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #f0f0f0 30%, #d9e4f5);
+      margin: 0;
+      padding: 0;
+      color: #333;
+      min-height: 100vh;
+    }
+  
+    h1 {
+      text-align: center;
+      margin-bottom: 40px;
+      color: #333;
+      font-size: 36px;
+      font-weight: 700;
+      text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.15);
+    }
+  
+    .container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 20px; /* 保证图标之间有间隙 */
+      padding: 0 20px 40px;
+      max-width: 1400px;
+      margin: 0 auto;
+      justify-items: center;
+    }
+  
+    .service {
+      background-color: #fff;
+      border: 1px solid #ccc;
+      border-radius: 15px;
+      text-align: center;
+      padding: 15px;
+      width: 160px;
+      box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      display: block;
+    }
+  
+    .service:hover {
+      transform: translateY(-12px);
+      box-shadow: 0px 12px 24px rgba(0, 0, 0, 0.15);
+    }
+  
+    .service img {
+      width: 80px;
+      height: 80px;
+      object-fit: contain;
+      margin-bottom: 10px;
+      transition: transform 0.3s ease;
+    }
+    
+    .service:hover img {
+      transform: scale(1.1);
+    }
+  
+    a {
+      text-decoration: none;
+    }
+    
+    .service-title {
+      font-size: 16px;
+      font-weight: bold;
+      margin-top: 10px;
+      color: #444;
+      transition: color 0.3s ease;
+    }
+  
+    .service:hover .service-title {
+      color: #0056b3;
+    }
+
+    /* Animation */
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  
+    .service {
+      animation: fadeIn 0.5s ease-in-out;
+    }
+  
+    @media (max-width: 768px) {
+      .container {
+        gap: 15px;
+      }
+  
+      .service {
+        width: 160px;
+        padding: 15px;
+      }
+  
+      .service img {
+        width: 80px;
+        height: 80px;
+      }
+  
+      .service-title {
+        font-size: 16px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>OPS Navigation Service</h1>
+
+  <div class="container">
+    <a class="service" href="https://omp.lsym.cn" target="_blank">
+      <img src="Images/Favicon.png" alt="OMP运维平台">
+      <div class="service-title">OMP运维平台</div>
+    </a>
+    <a class="service" href="https://git.lsym.cn" target="_blank">
+      <img src="Images/GitLab.png" alt="GitLab">
+      <div class="service-title">GitLab</div>
+    </a>
+    <a class="service" href="https://grafana.lsym.cn/" target="_blank">
+      <img src="Images/Grafana.png" alt="Grafana">
+      <div class="service-title">Grafana</div>
+    </a>
+    <a class="service" href="https://sonar.lsym.cn/" target="_blank">
+      <img src="Images/SonarQube.svg" alt="SonarQube">
+      <div class="service-title">代码质量检查</div>
+    </a>
+    <a class="service" href="https://registry-hq.lsym.cn/" target="_blank">
+        <img src="Images/Harbor.png" alt="Harbor">
+        <div class="service-title">Harbor</div>
+    </a>
+    <a class="service" href="https://nexus-hq.lsym.cn/" target="_blank">
+        <img src="Images/Nexus.png" alt="Nexus">
+        <div class="service-title">Nexus</div>
+    </a>
+    <a class="service" href="http://jenkins-hq.lsym.cn:8000/" target="_blank">
+        <img src="Images/Jenkins.png" alt="Jenkins">
+        <div class="service-title">Jenkins</div>
+    </a>
+    <a class="service" href="https://rancher.lsym.cn/" target="_blank">
+        <img src="Images/Rancher.svg" alt="Rancher">
+        <div class="service-title">Rancher</div>
+    </a>
+    <a class="service" href="https://argocd-hq.lsym.cn/" target="_blank">
+      <img src="Images/ArgoCD.svg" alt="ArgoCD开发测试">
+      <div class="service-title">ArgoCD开发测试</div>
+    </a>
+    <a class="service" href="https://argocd.lsym.cn/" target="_blank">
+      <img src="Images/ArgoCD.svg" alt="ArgoCD验收生产">
+      <div class="service-title">ArgoCD验收生产</div>
+    </a>
+    <a class="service" href="https://jumpserver.lsym.cn/" target="_blank">
+        <img src="Images/JumpServer.png" alt="JumpServer">
+        <div class="service-title">JumpServer</div>
+    </a>
+    <a class="service" href="https://vc.lsym.cn/" target="_blank">
+        <img src="Images/VMware.png" alt="VMware vSphere">
+        <div class="service-title">VMware vSphere</div>
+    </a>
+    <a class="service" href="https://huaxi.21vcloud.com/tenant/lsym/" target="_blank">
+        <img src="Images/Cloud-Director.png" alt="VMware Cloud Director">
+        <div class="service-title">VMware VCD</div>
+    </a>
+    <a class="service" href="http://172.16.34.219:5080/" target="_blank">
+      <img src="Images/Openobserve.png" alt="OpenObserve">
+      <div class="service-title">OpenObserve</div>
+    </a>
+    <a class="service" href="http://docs.lsym.cn/" target="_blank">
+      <img src="Images/Confluence.png" alt="Confluence">
+      <div class="service-title">Confluence</div>
+    </a>
+    <a class="service" href="http://jira.lsym.cn/" target="_blank">
+      <img src="Images/Jira.png" alt="Jira">
+      <div class="service-title">Jira</div>
+    </a>
+    <a class="service" href="http://zentao.lsym.cn/" target="_blank">
+      <img src="Images/Zentao.png" alt="Zentao">
+      <div class="service-title">禅道</div>
+    </a>
+    <a class="service" href="http://yapi-hq.lsym.cn/" target="_blank">
+      <img src="Images/Yapi.png" alt="Yapi">
+      <div class="service-title">Yapi</div>
+    </a>
+    <a class="service" href="https://devops.aliyun.com/" target="_blank">
+      <img src="Images/Alicloud.png" alt="阿里云效">
+      <div class="service-title">阿里云效</div>
+    </a>
+    <a class="service" href="https://itfs.cdlsym.com/7xSASE/" target="_blank">
+      <img src="Images/7xSASE.jpg" alt="零信任下载" style="border-radius: 12px;">
+      <div class="service-title">零信任下载</div>
+    </a>
+    <a class="service" href="https://accounts.lsym.cn/" target="_blank">
+      <img src="Images/Password.png" alt="自助密码服务">
+      <div class="service-title">自助密码服务</div>
+    </a>
+  </div>
+</body>
+</html>
